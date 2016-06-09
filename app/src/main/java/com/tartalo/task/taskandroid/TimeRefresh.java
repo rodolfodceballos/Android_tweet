@@ -23,7 +23,7 @@ public class TimeRefresh extends AppCompatActivity {
         getSupportActionBar().setTitle("Time Refresh");
 
         seekBar= (SeekBar) findViewById(R.id.timeSeekBar);
-        seekBar.setProgress(60);
+        seekBar.setProgress(App.GetApp().getTimeRefresh());
 
         textViewValue=(TextView) findViewById(R.id.textViewValue);
         textViewValue.setText(seekBar.getProgress()+" Seconds");

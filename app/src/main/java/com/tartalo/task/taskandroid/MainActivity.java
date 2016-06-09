@@ -40,10 +40,9 @@ public class MainActivity extends ListActivity
     private static final String TWITTER_SECRET = "dDOmrh0q8JVE6vvjvuJTTQo7rEm7gNgdu7tB65Lkd57XmsxdU6";
 
     TweetTimelineListAdapter adapter;
-    private Timer mTimer = null;
+    private Timer mTimer =  null;
     Toolbar toolbar;
     ProgressBar progressBar;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,17 +100,24 @@ public class MainActivity extends ListActivity
                     .build();
         }
 
-
         setListAdapter(adapter);
-
-        this.mTimer = new Timer();
-        this.mTimer.scheduleAtFixedRate(new TimerTask() {
+        mTimer =  new Timer();;
+        mTimer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
                 refresh();
             }
-        }, 0, 1000 * App.GetApp().getTimeRefresh());
+        }, 0, (1000 * App.GetApp().getTimeRefresh()));
+
+
+
         super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        mTimer.cancel();
+        super.onPause();
     }
 
     @Override
