@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.tartalo.task.taskandroid.WordSearch"
+    android:weightSum="1">
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="50dp"
+        android:layout_weight="0.20">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Find by Name"
+            android:id="@+id/radioButtonN"
+            android:layout_alignParentTop="true"
+            android:onClick="onRadioButtonClicked"
+            android:layout_centerHorizontal="true"
+            android:textSize="24sp" />
+
+        <com.tartalo.task.taskandroid.material_design.FloatingEditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:maxLength="50"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:typeface="sans"
+            android:hint="User Name" />
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Find by Hashtag"
+            android:onClick="onRadioButtonClicked"
+            android:id="@+id/radioButtonH"
+            android:gravity="center_vertical"
+            android:textSize="24sp"
+            android:layout_marginTop="20dp" />
+
+        <com.tartalo.task.taskandroid.material_design.FloatingEditText
+            android:id="@+id/editTextHasntag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:maxLength="50"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:typeface="sans"
+            android:hint="Hashtag" />
+
+
+    </RadioGroup>
+
+</LinearLayout>
