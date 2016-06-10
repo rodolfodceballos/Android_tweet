@@ -8,11 +8,17 @@ import android.app.Application;
 
 public class App extends Application {
 
+
+    private static final String USERNAME= "marcmarquez93";
+    private static final String HASHTAG = "#MotoGP";
+    private static final int TIMEDEFAULT = 60;
+    
     protected static App m_ThisApp;
     protected static int tipeSearch;
     protected static String wordSearch1;
     protected static String wordSearch0;
-    protected static int timeRefresh=60;
+    protected static int timeRefresh=TIMEDEFAULT;
+
 
 
     @Override
@@ -43,7 +49,7 @@ public class App extends Application {
 
     public static String getWordSearch0() {
         if (App.wordSearch0== null || App.wordSearch0.length()==0)
-            return "marcmarquez93";
+            return USERNAME;
         return App.wordSearch0;
     }
 
@@ -53,7 +59,7 @@ public class App extends Application {
 
     public static String getWordSearch1() {
         if (App.wordSearch1== null || App.wordSearch1.length()==0)
-            return "#MotoGP";
+            return HASHTAG;
         return wordSearch1;
     }
 
