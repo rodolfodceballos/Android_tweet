@@ -17,12 +17,15 @@ The application has a list of side menu, which allows:
 - Information about the author.
 
 Refresh Time
+
 A screen using a SeekBar where you can specify the refresh time between 0 seconds and 300 seconds is displayed. By default, the initial value is 60 seconds.
 
 Search Criteria
+
 This option displays a screen is selected by a radiobutton, if you are going to perform a search by username or hashtag, the defaults when starting the application are marcmarquez93 and #motogp respectively, these values can be modified. In defining the new search criteria and close the screen, you return to the list, which is refreshed with new tweets or displays the information that there are no tweets, should not be effective search for the specified criteria.
 
 About the Author
+
 Displays information about the author of the application
 
 
